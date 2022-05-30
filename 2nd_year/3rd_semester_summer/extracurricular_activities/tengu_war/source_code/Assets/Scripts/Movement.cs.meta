@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 41c2b4474a302274a940e5a881228b40
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Fire: {fileID: -927199367670048503, guid: 37d776cc424c62542a81f2c9eacde7ca, type: 3}
+  - Flame: {fileID: 4368393752007981713, guid: 1e41a5028c2a35748848a6848009911e, type: 3}
+  - Enemey: {fileID: 2604700467921625413, guid: fa0b625ba8df96c48b9d0f7da0e61b8c,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

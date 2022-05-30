@@ -1,0 +1,206 @@
+-- Table Dropping:
+-- -----------------------------------------------------------
+
+DROP TABLE Coach_Assis;
+DROP TABLE Coach;
+DROP TABLE Game;
+DROP TABLE Stadium;
+DROP TABLE Referee;
+DROP TABLE Player;
+DROP TABLE Team;
+DROP TABLE Staff;
+
+
+
+
+-- Creations:
+-- -----------------------------------------------------------
+
+CREATE TABLE Staff(
+	Staff_ID number(30) primary key,
+	Username varchar2(40) not null,
+	First_Name varchar2(25) not null,
+	Last_Name varchar2(25) not null
+);
+
+CREATE TABLE Team(	
+	name VARCHAR2(20) primary key, 
+	year DATE NOT NULL,
+	rating VARCHAR2(1), 
+	win NUMBER(2,0), 
+	lose NUMBER(2,0), 
+	draw NUMBER(2,0), 
+	points NUMBER(3,0), 
+	goals NUMBER(3,0), 
+	goal_difference NUMBER(3,0)
+);
+
+CREATE TABLE  Player(	
+	id NUMBER(10,0) primary key, 
+	team VARCHAR2(20) references team(name), 
+	fname VARCHAR2(10) NOT NULL ENABLE, 
+	lname VARCHAR2(10) NOT NULL ENABLE, 
+	age NUMBER(3,0) NOT NULL ENABLE, 
+	birthdate DATE NOT NULL ENABLE, 
+	position VARCHAR2(20), 
+	goals NUMBER(2,0)
+);
+
+CREATE TABLE Referee(
+	id NUMBER(10) primary key, 
+	fname VARCHAR2(10) not null, 
+	lname VARCHAR2(10) not null, 
+	age NUMBER(3) not null
+);
+
+CREATE TABLE Stadium(
+	name varchar2(20) primary key,
+	coarse_location varchar2(15) not null,
+	grain_location varchar2(30) not null unique,
+	capacity number(4) not null
+);
+
+CREATE TABLE Game(
+	date_ date,
+	stadium varchar2(20) references Stadium(name),
+	host varchar2(20) references Team(name) not null,
+	guest varchar2(20) references Team(name) not null,
+	referee number(10) references Referee(id) not null,
+	result varchar2(5),
+	primary key(date_,stadium)
+);
+
+CREATE TABLE Coach(	
+	id NUMBER(10) primary key, 
+	team VARCHAR2(20) unique references Team(name), 
+	fname VARCHAR2(10) not null, 
+	lname VARCHAR2(10) not null, 
+	age NUMBER(3) not null
+);
+
+CREATE TABLE Coach_Assis(
+	id NUMBER(10) primary key, 
+	Main_Coach NUMBER(10) references Coach(id), 
+	fname VARCHAR2(10) not null, 
+	lname VARCHAR2(10) not null, 
+	age NUMBER(3) not null
+);
+
+
+
+
+-- Insertions:
+-- -----------------------------------------------------------
+
+INSERT INTO Staff VALUES (1001,'STEVE.PITT','Steve','Pitt');
+INSERT INTO Staff VALUES (1002,'ANDY.THOMAS','Andrew','Thomas');
+INSERT INTO Staff VALUES (1003,'MARY.HARDY','Mary','Hardy');
+INSERT INTO Staff VALUES (1005,'JANE.STEWART','Jane','Stewart');
+
+INSERT INTO team VALUES ('Barcelona','11/29/1899','A',26,9,3,87,90,54);
+INSERT INTO team VALUES ('Atletico','4/26/1903','B',22,6,10,76,55,26);
+INSERT INTO team VALUES ('RealMadrid','3/6/1902','A',21,12,5,68,63,17);
+INSERT INTO team VALUES ('Getafe','7/8/1983','C',15,9,14,59,48,13);
+INSERT INTO team VALUES ('Valencia','3/18/1919','B',15,7,16,61,51,16);
+
+INSERT INTO player VALUES (1,'Barcelona','Ter','Shtegin',27,'4/30/1992','GK',0);
+INSERT INTO player VALUES (2,'Barcelona','Nelson','Semedo',25,'11/16/1993','Defence',1);
+INSERT INTO player VALUES (3,'Barcelona','Gerard','Pique',32,'02/02/1987','Defence',7);
+INSERT INTO player VALUES (4,'Barcelona','jordi','Alba',30,'3/21/1989','Defence',3);
+INSERT INTO player VALUES (5,'Barcelona','Samuel','Umtiti',26,'11/14/1993','Defence',0);
+INSERT INTO player VALUES (6,'Barcelona','Ivan','Rakitic',31,'3/10/1988','Mid',5);
+INSERT INTO player VALUES (7,'Barcelona','Sergio','Busquets',31,'7/16/1988','Mid',0);
+INSERT INTO player VALUES (8,'Barcelona','Philippe','Coutinho',27,'6/12/1992','Mid',11);
+INSERT INTO player VALUES (9,'Barcelona','Luis','Suarez',32,'1/24/1987','Forward',23);
+INSERT INTO player VALUES (10,'Barcelona','Lionel','Messi',32,'6/24/1987','Forward',45);
+INSERT INTO player VALUES (11,'Barcelona','Ousmane','Dembele',22,'5/15/1997','Forward',14);
+INSERT INTO player VALUES (12,'RealMadrid','Keylor','Navas',33,'12/15/1986','GK',0);
+INSERT INTO player VALUES (13,'RealMadrid','Serigio','Ramos',33,'3/30/1986','Defence',15);
+INSERT INTO player VALUES (14,'RealMadrid','Raphael','Varane',26,'4/25/1993','Defence',4);
+INSERT INTO player VALUES (15,'RealMadrid','Dani','Carvajal',27,'1/11/1992','Defence',1);
+INSERT INTO player VALUES (16,'RealMadrid','Marcelo','Vieira',31,'5/12/1988','Defence',3);
+INSERT INTO player VALUES (17,'RealMadrid','Luka','Modric',33,'9/9/1985','Mid',6);
+INSERT INTO player VALUES (18,'RealMadrid','Toni','Kroos',29,'1/4/1990','Mid',3);
+INSERT INTO player VALUES (19,'RealMadrid','Francisco','Isco',27,'4/21/1992','Mid',8);
+INSERT INTO player VALUES (20,'RealMadrid','Vinicius','junior',19,'7/12/2000','Forward',14);
+INSERT INTO player VALUES (21,'RealMadrid','Karim','Benzema',32,'12/19/1987','Forward',31);
+INSERT INTO player VALUES (22,'RealMadrid','Garith','Bale',30,'7/16/1989','Forward',17);
+INSERT INTO player VALUES (23,'Getafe','David','Soria',26,'4/4/1993','GK',0);
+INSERT INTO player VALUES (24,'Getafe','Vitorino','Antunes',32,'4/1/1987','Defence',1);
+INSERT INTO player VALUES (25,'Getafe','Ignasi','Miquel',27,'9/28/1992','Defence',0);
+INSERT INTO player VALUES (26,'Getafe','Mathias','Olivera',22,'10/31/1997','Defence',1);
+INSERT INTO player VALUES (27,'Getafe','David','Djene',28,'12/31/1991','Defence',0);
+INSERT INTO player VALUES (28,'Getafe','David','Bergara',33,'5/5/1986','Mid',0);
+INSERT INTO player VALUES (29,'Getafe','Nemanja','Maksimovic',24,'1/26/1995','Mid',0);
+INSERT INTO player VALUES (30,'Getafe','Marco','Flamini',35,'3/7/1984','Mid',0);
+INSERT INTO player VALUES (31,'Getafe','Juan','Mata',31,'10/7/1988','Forward',16);
+INSERT INTO player VALUES (32,'Getafe','Juan','Saiz',28,'1/22/1991','Forward',1);
+INSERT INTO player VALUES (33,'Getafe','Jorge','Molina',37,'4/22/1982','Forward',15);
+INSERT INTO player VALUES (34,'Valencia','Norberto','Neto',30,'7/19/1989','GK',0);
+INSERT INTO player VALUES (35,'Valencia','Gabriel','Paulista',29,'11/26/1990','Defence',0);
+INSERT INTO player VALUES (36,'Valencia','Mouctar','Diakhaby',23,'12/19/1996','Defence',2);
+INSERT INTO player VALUES (37,'Valencia','Ezequiel','Garay',33,'10/10/1986','Defence',2);
+INSERT INTO player VALUES (38,'Valencia','Jose','Gaya',24,'5/25/1995','Defence',1);
+INSERT INTO player VALUES (39,'Valencia','Juan','Soler',22,'1/2/1997','Mid',0);
+INSERT INTO player VALUES (40,'Valencia','Daniel','Parejo',30,'4/16/1989','Mid',8);
+INSERT INTO player VALUES (41,'Valencia','Francis','Coquelin',28,'5/13/1991','Mid',0);
+INSERT INTO player VALUES (42,'Valencia','Denis','Cheryshev',29,'12/26/1990','Forward',2);
+INSERT INTO player VALUES (43,'Valencia','Rodrigo','Moreno',28,'5/6/1991','Forward',5);
+INSERT INTO player VALUES (44,'Valencia','Santi','Mina',24,'12/7/1995','Forward',4);
+INSERT INTO player VALUES (45,'Atletico','Jan','Oblak',26,'1/7/1993','GK',0);
+INSERT INTO player VALUES (46,'Atletico','Diego','Godin',33,'2/16/1986','Defence',3);
+INSERT INTO player VALUES (47,'Atletico','Filipe','Luis',34,'8/9/1985','Defence',2);
+INSERT INTO player VALUES (48,'Atletico','Francisco','Juanfran',34,'1/9/1985','Defence',0);
+INSERT INTO player VALUES (49,'Atletico','Santiago','Arias',27,'1/13/1992','Defence',1);
+INSERT INTO player VALUES (50,'Atletico','Thomas','Partey',26,'6/13/1993','Mid',3);
+INSERT INTO player VALUES (51,'Atletico','Jorge','Koke',27,'1/8/1992','Mid',2);
+INSERT INTO player VALUES (52,'Atletico','Saul','Niguez',25,'11/21/1994','Mid',4);
+INSERT INTO player VALUES (53,'Atletico','Antoine','Griezmann',28,'3/21/1991','Forward',14);
+INSERT INTO player VALUES (54,'Atletico','Nikola','Kalinic',31,'1/5/1988','Forward',2);
+INSERT INTO player VALUES (55,'Atletico','Angel','Correa',24,'3/9/1995','Forward',2);
+
+INSERT INTO referee VALUES (1,'Estrada','fernandez',33);
+INSERT INTO referee VALUES (2,'Jesus','Manzano',28);
+INSERT INTO referee VALUES (3,'Carlos','Grande',35);
+INSERT INTO referee VALUES (4,'Antonio','Lahoz',31);
+INSERT INTO referee VALUES (5,'Mario','Lopez',35);
+INSERT INTO referee VALUES (6,'Santiago','Latre',35);
+INSERT INTO referee VALUES (7,'Juan','Munuera',31);
+INSERT INTO referee VALUES (8,'Eduardo','Iglesiaz',32);
+INSERT INTO referee VALUES (9,'Pablo','Fuertes',37);
+INSERT INTO referee VALUES (10,'Medie','Jimenez',32);
+
+INSERT INTO stadium VALUES ('Santiago Bernabeu','Spain','Madrid',81);
+INSERT INTO stadium VALUES ('Camp Nou','Spain','Barcelona',99);
+INSERT INTO stadium VALUES ('Wanda Metropolitano','Spain','San Blas',68);
+INSERT INTO stadium VALUES ('Mestalla','Spain','Avenida Suecia',55);
+INSERT INTO stadium VALUES ('Coliseum Alfonso','Spain','Getafe',17);
+
+INSERT INTO Game VALUES ('1/1/2019','Santiago Bernabeu','RealMadrid','Barcelona',1,'2-3');
+INSERT INTO Game VALUES ('1/6/2019','Santiago Bernabeu','RealMadrid','Atletico',2,'1-0');
+INSERT INTO Game VALUES ('1/11/2019','Santiago Bernabeu','RealMadrid','Getafe',3,'2-0');
+INSERT INTO Game VALUES ('1/16/2019','Santiago Bernabeu','RealMadrid','Valencia',4,'2-2');
+INSERT INTO Game VALUES ('1/1/2019','Wanda Metropolitano','Atletico','Valencia',9,'4-2');
+INSERT INTO Game VALUES ('1/6/2019','Mestalla','Valencia','Getafe',7,'4-0');
+INSERT INTO Game VALUES ('1/11/2019','Camp Nou','Barcelona','Valencia',10,'3-1');
+INSERT INTO Game VALUES ('1/16/2019','Coliseum Alfonso','Getafe','Atletico',4,'0-2');
+INSERT INTO Game VALUES ('1/20/2019','Coliseum Alfonso','Getafe','Valencia',6,'1-0');
+INSERT INTO Game VALUES ('1/20/2019','Wanda Metropolitano','Barcelona','Atletico',5,'0-0');
+
+INSERT INTO coach VALUES (1,'Barcelona','Ernesto','valverde',55);
+INSERT INTO coach VALUES (2,'Atletico','Diego','simeone',49);
+INSERT INTO coach VALUES (3,'RealMadrid','Zinedine','zidane',47);
+INSERT INTO coach VALUES (4,'Getafe','Jose','bordalas',55);
+INSERT INTO coach VALUES (5,'Valencia','Albert','Celades',44);
+
+INSERT INTO coach_assis VALUES (1,3,'David','bettoni',48);
+INSERT INTO coach_assis VALUES (2,3,'HaMidou','Masaidie',43);
+INSERT INTO coach_assis VALUES (3,3,'Roberto','Vazquez',40);
+INSERT INTO coach_assis VALUES (4,1,'Jon','Aspiazu',57);
+INSERT INTO coach_assis VALUES (5,1,'Joan','Barbara',53);
+INSERT INTO coach_assis VALUES (6,1,'Jose','Ramon',48);
+INSERT INTO coach_assis VALUES (7,2,'German','Burgos',50);
+INSERT INTO coach_assis VALUES (8,2,'Nelson','Vivas',50);
+INSERT INTO coach_assis VALUES (9,2,'Pablo','Vercellone',47);
+INSERT INTO coach_assis VALUES (10,5,'Oscar','Alvarez',45);
+INSERT INTO coach_assis VALUES (11,5,'Javier','Minano',52);

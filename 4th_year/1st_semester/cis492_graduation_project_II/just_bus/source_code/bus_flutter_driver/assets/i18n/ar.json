@@ -1,0 +1,118 @@
+{
+  "app_name": "JUST Driver",
+  "nav_drawer": {
+    "dark_theme": "سمة داكنة",
+    "language": "اللغة",
+    "feedback": "ملاحظات",
+    "connection_test": "اختبار الاتصال",
+    "working_hours": "أوقات العمل"
+  },
+  "splash_page": {
+    "contacting": "جاري الاتصال بالخادم…",
+    "update_latest": "يرجى تحديث التطبيق إلى آخر إصدار",
+    "internet_required": "يرجى الإتصال بخدمة الإنترنت.",
+    "back_online": "تمت استعادة الإتصال بخدمة الإنترنت"
+  },
+  "main_activity": {
+    "fetching_routes": "جاري تحميل الطرق",
+    "select_route": "اختيار الطريق",
+    "views": "مشاهدة",
+    "close": "إغلاق",
+    "your_location": "موقعك",
+    "removed_favourite_route": "تمت إزالة المسار المفضل",
+    "added_route": "تمت إضاف",
+    "as_favourite_route": "كالمسار المفضل",
+    "loc_service_req": "يرجى تشغيل خدمة تحديد المواقع",
+    "loc_service_req_denied_forever": "تم رفض إذن الموقع إلى الأبد ، انتقل إلى إعدادات التطبيق وقم بتمكينه يدويًا",
+    "stop_no": "موقف رقم ",
+    "press_back_exit": "اضغط مرة أخرى للخروج",
+    "no_current_drivers": "لا يوجد سائقين على المسار حاليا",
+    "distance": "المسافة:",
+    "duration": "الزمن:",
+    "speed": "السرعة:",
+    "meter": "م",
+    "kilometer": "كم",
+    "minute": "دقيقة",
+    "minute_3-10": "دقائق",
+    "minutes": "دقيقة",
+    "hour": "ساعة",
+    "hours_3-10": "ساعات",
+    "hours": "ساعة",
+    "kilometer_per_hour": "كم/ساعة",
+    "driver": "السائق:",
+    "plate_number": "رقم اللوحة:",
+    "manufacturer": "المصنع:",
+    "model": "الموديل:",
+    "paint": "الدهان:",
+    "capacity": "السعة:",
+    "show_current_location": "إظهار الموقع الحالي",
+    "show_current_route": "عرض الطريق الحالي",
+    "track_location": "تتبع الموقع",
+    "switch_alternative_route": "التحويل الى الطريق البديل",
+    "switch_original_route": "التحويل إلى الطريق الأصيل",
+    "switch_map_view": "تغيير عرض الخريطة",
+    "background": "تشغيل في الخلفية",
+    "audio_on": "صوت",
+    "audio_off": "صامت",
+    "logout": "تسجيل الخروج",
+    "outside_working_hours": "خارج أوقات العمل",
+    "outside_working_hours_tooltip": "لن يتم تسجيل موقعك"
+  },
+  "feedback": {
+    "feedback": "ملاحظات",
+    "phone": "رقم الهاتف (اختياري)",
+    "include_os": "إضافة معلومات نظام التشغيل، لن يتم جمع أي بيانات شخصية.",
+    "submit": "إرسال",
+    "feedback_full": "قائمة الملاحظات ممتلئة حاليًا، يُرجى المحاولة مرة أخرى لاحقًا",
+    "invalid_phone": "رقم الهاتف غير صحيح",
+    "message_cannot_be_empty": "لا يمكن أن تكون الرسالة فارغة",
+    "bit_longer": "يجب أن تكون الرسالة أطول قليلاً",
+    "sending_feedback": "جاري إرسال الملاحظة...",
+    "thank_you_feedback": "شكرا لملاحظتك!"
+  },
+  "login": {
+    "number": "رقم المستخدم",
+    "password": "كلمة المرور",
+    "login": "دخول",
+    "submit": "تسجيل الدخول",
+    "err_number_empty": "رقم المستخدم لا يمكن أن يكون فارغًا",
+    "err_password_empty": "كلمة السر لا يمكن أن تكون فارغة",
+    "invalid_login": "المعلومات المدخلة خاطئة"
+  },
+  "api_response": {
+    "timed_out": "لا يمكن الاتصال بالخادم - انتهت مهلة الانتظار",
+    "too_many_requests": "تم إرسال عدد كبيرا من الطلبات",
+    "server_error": "حدث خطأ غير معروف في الخادم"
+  },
+  "foreground_service": {
+    "title": "جاري جمع الموقع...",
+    "message": "يرجى عدم إغلاق التطبيق"
+  },
+  "reachability_dialog": {
+    "checking": "جارٍ التحقق من الاتصال...",
+    "finished": "تمت العملية",
+    "failed": "فشلت العملية",
+    "pending": "قيد الانتظار",
+    "entry": "الدخول",
+    "db": "قاعدة البيانات",
+    "return": "العودة",
+    "rtt": "الذهاب والإياب",
+    "millisecond": "ملي ث",
+    "second": "ث"
+  },
+  "active_hours_dialog": {
+    "days": "الأيام",
+    "hours": "الساعات",
+    "day_names": {
+      "sunday": "احد",
+      "monday": "اثن",
+      "tuesday": "ثلا",
+      "wednesday": "أرب",
+      "thursday": "خمس",
+      "friday": "جمع",
+      "saturday": "سبت"
+    },
+    "from": "من",
+    "to": "إلى"
+  }
+}

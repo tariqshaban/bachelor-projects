@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3f0d2a5476166d84b99a8fe25bde3226
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Flame: {fileID: 4368393752007981713, guid: f1972c2a4ccc4554db67d44f856ab702, type: 3}
+  - Flame1: {fileID: 4368393752007981713, guid: f1972c2a4ccc4554db67d44f856ab702,
+      type: 3}
+  - Fire: {fileID: -927199367670048503, guid: a946335ca0328994fa03fface0fde8ec, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

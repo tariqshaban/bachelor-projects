@@ -1,0 +1,67 @@
+#gradeTable {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  opacity:0.85;
+}
+
+th.name-col, th.grade-col {
+  cursor: pointer;
+  text-align: center;
+  width:300px;
+}
+
+#gradeTable .checkbox-col {
+  width: 80px;
+  text-align: center;
+}
+
+#gradeTable .checkbox-col input {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: auto;
+}
+
+#gradeTable .grade-col {
+  width: 180px;
+}
+
+#gradeTable .grade-col input {
+  display: inline-block;
+  width: 100px;
+}
+
+#gradeTable .options-col {
+  width: 60px;
+  text-align: center;
+}
+
+#delete-all-checked-btn {
+  color: red;
+  font-size: 25px;
+  line-height: 35px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.delete-row-btn {
+  color: red;
+  font-size: 20px;
+}
+
+.grade-pass {
+  background: #5CC573;
+  color: #023A14;
+  text-align: center;
+}
+
+.grade-fail {
+  background: #c55c68;
+  color: #e8d5d7;
+  text-align: center;
+}
+
+.editable {
+  cursor: pointer;
+}

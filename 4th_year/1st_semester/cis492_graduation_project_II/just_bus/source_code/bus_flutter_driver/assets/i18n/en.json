@@ -1,0 +1,118 @@
+{
+  "app_name": "JUST Driver",
+  "nav_drawer": {
+    "dark_theme": "Dark Theme",
+    "language": "Language",
+    "feedback": "Feedback",
+    "connection_test": "Connection Test",
+    "working_hours": "Working Hours"
+  },
+  "splash_page": {
+    "contacting": "Contacting server…",
+    "update_latest": "Please update the application to the latest version",
+    "internet_required": "Internet connection is required",
+    "back_online": "Back online"
+  },
+  "main_activity": {
+    "fetching_routes": "Fetching Routes...",
+    "select_route": "Select Route",
+    "views": "views",
+    "close": "Close",
+    "your_location": "Your Location",
+    "removed_favourite_route": "Removed favourite route",
+    "added_route": "Added",
+    "as_favourite_route": "as the favourite route",
+    "loc_service_req": "Please turn on the location service",
+    "loc_service_req_denied_forever": "Location permission has been denied forever, go to the app settings and enable it manually",
+    "stop_no": "Stop No.",
+    "press_back_exit": "Press again to exit",
+    "no_current_drivers": "There are currently no drivers on path",
+    "distance": "Distance:",
+    "duration": "Duration:",
+    "speed": "Speed:",
+    "meter": "m",
+    "kilometer": "km",
+    "minute": "min",
+    "minute_3-10": "mins",
+    "minutes": "mins",
+    "hour": "hr",
+    "hours_3-10": "hrs",
+    "hours": "hrs",
+    "kilometer_per_hour": "km/h",
+    "driver": "Driver:",
+    "plate_number": "Plate Number:",
+    "manufacturer": "Manufacturer:",
+    "model": "Model:",
+    "paint": "Paint:",
+    "capacity": "Capacity:",
+    "show_current_location": "Show current location",
+    "show_current_route": "Show current route",
+    "track_location": "Track location",
+    "switch_alternative_route": "Switch to alternative path",
+    "switch_original_route": "Switch to original path",
+    "switch_map_view": "Switch map view",
+    "background": "Run in background",
+    "audio_on": "Sound",
+    "audio_off": "Muted",
+    "logout": "Logout",
+    "outside_working_hours": "Outside working hours",
+    "outside_working_hours_tooltip": "Location wont be recorded"
+  },
+  "feedback": {
+    "feedback": "Feedback",
+    "phone": "Phone Number (optional)",
+    "include_os": "Include operating system information, no personal data will be collected.",
+    "submit": "Submit",
+    "feedback_full": "Feedback queue is currently full, please try again later",
+    "invalid_phone": "Invalid phone number",
+    "message_cannot_be_empty": "Message cannot be empty",
+    "bit_longer": "Message should be a bit longer",
+    "sending_feedback": "Sending Feedback...",
+    "thank_you_feedback": "Thank you for the feedback!"
+  },
+  "login": {
+    "number": "User Number",
+    "password": "Password",
+    "login": "Login",
+    "submit": "Sign in",
+    "err_number_empty": "User number cannot be empty",
+    "err_password_empty": "Password cannot be empty",
+    "invalid_login": "Invalid Credentials"
+  },
+  "api_response": {
+    "timed_out": "Cannot connect to the server - timeout threshold exceeded",
+    "too_many_requests": "Too many requests sent",
+    "server_error": "Unknown server error occurred"
+  },
+  "foreground_service": {
+    "title": "Listening for location...",
+    "message": "Please do not close the application"
+  },
+  "reachability_dialog": {
+    "checking": "Checking Connections...",
+    "finished": "Done",
+    "failed": "Failed",
+    "pending": "Pending",
+    "entry": "Entry",
+    "db": "Database",
+    "return": "Return",
+    "rtt": "Round Trip",
+    "millisecond": "ms",
+    "second": "s"
+  },
+  "active_hours_dialog": {
+    "days": "Days",
+    "hours": "Hours",
+    "day_names": {
+      "sunday": "Sun",
+      "monday": "Mon",
+      "tuesday": "Tue",
+      "wednesday": "Wed",
+      "thursday": "Thu",
+      "friday": "Fri",
+      "saturday": "Sat"
+    },
+    "from": "From",
+    "to": "To"
+  }
+}

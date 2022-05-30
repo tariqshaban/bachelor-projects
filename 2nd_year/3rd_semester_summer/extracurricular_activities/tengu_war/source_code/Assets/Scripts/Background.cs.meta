@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5a9459a3649763c43a44741422d75cc2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Enemy: {fileID: 2604700467921625413, guid: 62fbcaf07cc13934f8eaba170145bbf9, type: 3}
+  - Flame: {fileID: 4368393752007981713, guid: 1e41a5028c2a35748848a6848009911e, type: 3}
+  - Ally: {fileID: 7671602539467889878, guid: 73754987d6c8aca468599285cb0ea174, type: 3}
+  - AllyFlame: {fileID: 4368393752007981713, guid: f1972c2a4ccc4554db67d44f856ab702,
+      type: 3}
+  - AllyFlame1: {fileID: 4368393752007981713, guid: f1972c2a4ccc4554db67d44f856ab702,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

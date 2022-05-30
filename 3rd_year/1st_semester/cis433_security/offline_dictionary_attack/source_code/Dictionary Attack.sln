@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary Attack", "Dictionary Attack\Dictionary Attack.csproj", "{AABADBA2-FD6D-4B32-BD12-5CFE1FDE1559}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AABADBA2-FD6D-4B32-BD12-5CFE1FDE1559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABADBA2-FD6D-4B32-BD12-5CFE1FDE1559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABADBA2-FD6D-4B32-BD12-5CFE1FDE1559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABADBA2-FD6D-4B32-BD12-5CFE1FDE1559}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15235D53-045E-4680-86B9-2A9861BE0913}
+	EndGlobalSection
+EndGlobal
